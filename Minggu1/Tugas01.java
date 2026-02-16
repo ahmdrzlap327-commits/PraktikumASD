@@ -1,0 +1,43 @@
+package Minggu1;
+import java.util.Scanner;
+public class Tugas01 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Array 1 dimensi untuk Kode Plat 
+        char[] KODE = {'A', 'B', 'D', 'E', 'G', 'H', 'L', 'N', 'T'};
+
+        // Array 2 dimensi untuk Nama Kota 
+        char[][] KOTA = {
+            {'B', 'A', 'N', 'T', 'E', 'N'},               
+            {'J', 'A', 'K', 'A', 'R', 'T', 'A'},         
+            {'B', 'A', 'N', 'D', 'U', 'N', 'G'},         
+            {'C', 'I', 'R', 'E', 'B', 'O', 'N'},         
+            {'P', 'E', 'K', 'A', 'L', 'O', 'N', 'G', 'A', 'N'}, 
+            {'S', 'E', 'M', 'A', 'R', 'A', 'N', 'G'},    
+            {'S', 'U', 'R', 'A', 'B', 'A', 'Y', 'A'},    
+            {'M', 'A', 'L', 'A', 'N', 'G'},              
+            {'T', 'E', 'G', 'A', 'L'},
+        };
+
+        System.out.print("Masukkan Kode Plat Nomor: ");
+        char input = sc.next().toUpperCase().charAt(0);
+
+        boolean ditemukan = false;
+        for (int i = 0; i < KODE.length; i++) {
+            if (input == KODE[i]) {
+                System.out.print("Kota: ");
+                for (int j = 0; j < KOTA[i].length; j++) {
+                    System.out.print(KOTA[i][j]);
+                }
+                System.out.println();
+                ditemukan = true;
+                break;
+            }
+        }
+
+        if (!ditemukan) {
+            System.out.println("Kode plat tidak ditemukan.");
+        }
+    }
+}
