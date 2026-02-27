@@ -45,12 +45,9 @@ public class mahasiswaDemo02 {
         arrayOfMahasiswa[2].ipk = (float) 3.80;
 
         for (int i = 0; i < 3; i++) {
-            System.out.println("Data Mahasiswa ke-" + (i + 1)); 
-            System.out.println("NIM    : " + arrayOfMahasiswa[i].nim); 
-            System.out.println("Nama   : " + arrayOfMahasiswa[i].nama); 
-            System.out.println("Kelas  : " + arrayOfMahasiswa[i].kelas); 
-            System.out.println("IPK    : " + arrayOfMahasiswa[i].ipk); 
-            System.out.println("------------------------------------"); 
+            System.out.println("Data Mahasiswa ke-" + (i + 1));
+            arrayOfMahasiswa[i].cetakInfo(); 
+            System.out.println("------------------------------------");
         }
         
         System.out.println("NIM    : " + arrayOfMahasiswa[0].nim);
