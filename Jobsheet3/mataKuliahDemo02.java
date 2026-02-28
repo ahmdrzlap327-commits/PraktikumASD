@@ -3,9 +3,11 @@ import java.util.Scanner;
 public class mataKuliahDemo02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        mataKuliah02[] arrayOfMatakuliah = new mataKuliah02[2]; // Membuat array kapasitas 3
-        // String kode, nama, dummy;
-        // int sks, jumlahJam;
+        System.out.print("Masukkan jumlah matakuliah: ");
+        int jml = sc.nextInt();
+        sc.nextLine(); 
+        mataKuliah02[] arrayOfMatakuliah = new mataKuliah02[jml];
+        
 
         for (int i = 0; i < arrayOfMatakuliah.length; i++) {
             arrayOfMatakuliah[i] = new mataKuliah02("", "", 0, 0);
