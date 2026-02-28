@@ -27,9 +27,9 @@ public class dosenDemo02 {
         }
 
         System.out.println("\n======= DAFTAR DOSEN =======");
-        int counter = 1;
+        int hitungan = 1;
         for (dosen02 dosen : arrayOfDosen) {
-            System.out.println("Data Dosen ke-" + counter);
+            System.out.println("Data Dosen ke-" + hitungan);
             System.out.println("Kode          : " + dosen.kode);
             System.out.println("Nama          : " + dosen.nama);
             // Konversi Boolean ke teks agar sesuai contoh output
@@ -37,7 +37,16 @@ public class dosenDemo02 {
             System.out.println("Jenis Kelamin : " + gender);
             System.out.println("Usia          : " + dosen.usia);
             System.out.println("--------------------------------");
-            counter++;
+            hitungan++;
         }
+
+        dataDosen dataHelper = new dataDosen();
+        
+        // Memanggil semua method statistik 
+        dataHelper.dataSemuaDosen(arrayOfDosen);
+        dataHelper.jumlahDosenPerJenisKelamin(arrayOfDosen);
+        dataHelper.rerataUsiaDosenPerJenisKelamin(arrayOfDosen);
+        dataHelper.infoDosenPalingTua(arrayOfDosen);
+        dataHelper.infoDosenPalingMuda(arrayOfDosen);
     }
 }
