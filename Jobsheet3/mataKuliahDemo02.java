@@ -10,6 +10,8 @@ public class mataKuliahDemo02 {
         
 
         for (int i = 0; i < arrayOfMatakuliah.length; i++) {
+            System.out.print("Masukan Data Matakuliah ke-" + (i+1));
+            System.out.println();
             arrayOfMatakuliah[i] = new mataKuliah02("", "", 0, 0);
             arrayOfMatakuliah[i].tambahData(sc);
         }

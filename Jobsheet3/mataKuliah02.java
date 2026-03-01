@@ -24,7 +24,7 @@ public class mataKuliah02 {
         this.sks = sc.nextInt(); 
         sc.nextLine();
         System.out.print("Jumlah Jam : ");
-        this.sks = sc.nextInt(); 
+        this.jumlahJam = sc.nextInt(); 
         sc.nextLine();
         System.out.println("--------------------------------");
     }
