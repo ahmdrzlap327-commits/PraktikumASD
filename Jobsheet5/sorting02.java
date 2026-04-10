@@ -32,4 +32,18 @@ public class sorting02 {
             }
         }
     }
+
+    void selectionsort(){
+        for (int i = 0; i < jumDat-1; i++) {
+            int min = i;
+            for (int j = i+1; j < jumDat; j++) {
+                if (data[j] < data[min]) {
+                    min = j;
+                }
+            }
+            int temp = data[i];
+            data[i] = data[min];
+            data[min] = temp;
+        }
+    }
 }
