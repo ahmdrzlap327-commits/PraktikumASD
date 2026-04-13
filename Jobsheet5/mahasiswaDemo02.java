@@ -1,19 +1,41 @@
 package Jobsheet5;
 
+import java.util.Scanner;
+
 public class mahasiswaDemo02 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         mahasiswaBerprestasi02 list = new mahasiswaBerprestasi02();
-        mahasiswa02 m1 = new mahasiswa02 ("123","Zidan", "2A", 3.2);
-        mahasiswa02 m2 = new mahasiswa02 ("124","Ayu", "2A", 3.5);
-        mahasiswa02 m3 = new mahasiswa02 ("125","Sofi", "2A", 3.1);
-        mahasiswa02 m4 = new mahasiswa02 ("126","Sita", "2A", 3.9);
-        mahasiswa02 m5 = new mahasiswa02 ("127","Miki", "2A", 3.7);
+        int jmlMhs = 5;
 
-        list.tambah(m1);
-        list.tambah(m2);
-        list.tambah(m3);
-        list.tambah(m4);
-        list.tambah(m5);
+        for (int i = 0; i < jmlMhs; i++) {
+            System.out.println("Masukkan Data Mahasiswa ke-" + (i + 1));
+            System.out.print("NIM   : ");
+            String nim = sc.nextLine();
+            System.out.print("Nama  : ");
+            String nama = sc.nextLine();
+            System.out.print("Kelas : ");
+            String kelas = sc.nextLine();
+            System.out.print("IPK   : ");
+            double ipk = sc.nextDouble();
+            sc.nextLine(); 
+
+            mahasiswa02 m = new mahasiswa02(nim, nama, kelas, ipk);
+            list.tambah(m);
+            System.out.println();
+        }
+        // mahasiswaBerprestasi02 list = new mahasiswaBerprestasi02();
+        // mahasiswa02 m1 = new mahasiswa02 ("123","Zidan", "2A", 3.2);
+        // mahasiswa02 m2 = new mahasiswa02 ("124","Ayu", "2A", 3.5);
+        // mahasiswa02 m3 = new mahasiswa02 ("125","Sofi", "2A", 3.1);
+        // mahasiswa02 m4 = new mahasiswa02 ("126","Sita", "2A", 3.9);
+        // mahasiswa02 m5 = new mahasiswa02 ("127","Miki", "2A", 3.7);
+
+        // list.tambah(m1);
+        // list.tambah(m2);
+        // list.tambah(m3);
+        // list.tambah(m4);
+        // list.tambah(m5);
 
         System.out.println("Data mahasiswa sebelum sorting: ");
         list.tampil();
