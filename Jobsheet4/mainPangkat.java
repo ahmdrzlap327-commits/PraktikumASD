@@ -1,4 +1,4 @@
-package Minggu5;
+package Jobsheet4;
 
 import java.util.Scanner;
 

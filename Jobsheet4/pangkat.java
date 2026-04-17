@@ -1,4 +1,4 @@
-package Minggu5;
+package Jobsheet4;
 
 public class pangkat {
     public int nilai, pangkat;
