@@ -56,10 +56,27 @@ public class stackTugasMahasiswa02 {
         }
     }
 
+    public mahasiswa02 peekBottom() {
+        if (!isEmpty()) {
+            return stack[0]; 
+        } else {
+            System.out.println("Stack kosong!");
+            return null;
+        }
+    }
+
     public void print() {
         System.out.println("Daftar semua tugas:");
         for (int i = top; i >= 0; i--) { 
             System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas); 
         }
+        System.out.println("");
+    }
+
+    public int getJumlahTugas() {
+        if (isEmpty()) {
+            return 0;
+        }
+        return top + 1;
     }
 }
