@@ -80,12 +80,15 @@ public class doubleLinkedList02 {
             return;
         } 
 
+        mahasiswa02 tmp = head.data;
         if (head == tail) {
             head = tail = null;
         } else {
             head = head.next;
             head.prev = null;
         }
+        System.out.println("Data berhasil dihapus.");
+        tmp.tampil();
     }
 
     public void removeLast(){
@@ -94,13 +97,30 @@ public class doubleLinkedList02 {
             return;
         }
 
+        mahasiswa02 tmp = tail.data;
         if (head == tail) {
             head = tail = null;
         } else {
             tail = tail.prev;
             tail.next = null;
         }
+        System.out.println("Data berhasil dihapus.");
+        tmp.tampil();
     }
 
-    
+    public void printReverse() {
+        if (isEmpty()) {
+            System.out.println("Linked List masih kosong.");
+            return;
+        }
+        System.out.println("=== CETAK DARI BELAKANG (TAIL -> HEAD) ===");
+        node02 current = tail;
+        while (current != null) {
+            current.data.tampil();
+            System.out.println("--------------------");
+            current = current.prev;
+        }
+    }
+
+
 }
